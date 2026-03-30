@@ -8,35 +8,19 @@ Sometimes I edit gifs in macOS preview, but saving seems to break the looping be
 ```
 
 ### Intensify
-```sh
-#!/bin/sh
-
-fileToIntensify=$1
-fileOutput=$2
-tempFileName=intensifier-temp
-jitter=4
-jitterRange=$((($jitter*2)+1))
-
-for i in {1..10}
-do
-  ecks=$(($RANDOM%$jitterRange-$jitter))
-  why=$(($RANDOM%$jitterRange-$jitter))
-
-  if [ $ecks -ge 0 ]; then ecks="+"$ecks; fi;
-  if [ $why -ge 0 ]; then why="+"$why; fi;
-
-  echo $ecks$why
-  convert -page $ecks$why $fileToIntensify -background none -flatten $tempFileName.$i
-done
-
-convert -delay 3 -dispose Background +page $tempFileName.* -colors 128 -loop 0 $fileOutput
-
-rm $tempFileName.*
-```
+Creates a gif that jitters around "intensifyingly".
 
 Use as
 ```sh
 ./intensify.sh {input_file} {output_file}
+```
+
+### Party-ify
+Creates a rainbow gradient gif with a "smoothness" level that controls how abrupt the color shifting is. I've found 3/4 to be a nice sweet-spot.
+
+Us as
+```sh
+./party-ify.sh {input_file} {output_file} {smoothness level}
 ```
 
 ## `:gopher_peek:`
@@ -146,3 +130,6 @@ Use as
 
 ## `:gopher_intensifies:`
 <img src="./emojis/gopher_intensifies.gif" alt=":gopher_intensifies:" width=64>
+
+## `:spicy-party:`
+<img src="./emojis/spicy_party.gif" alt=":spicy_party:" width=64>
