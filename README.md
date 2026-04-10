@@ -18,10 +18,20 @@ Use as
 ### Party-ify
 Creates a rainbow gradient gif with a "smoothness" level that controls how abrupt the color shifting is. I've found 3/4 to be a nice sweet-spot.
 
-Us as
+Use as
 ```sh
 ./party-ify.sh {input_file} {output_file} {smoothness level}
 ```
+
+
+### Party-ify GIF
+Creates a rainbow gradient gif with a "smoothness" level that controls how abrupt the color shifting is. It's basically identical to the other, but it cycles the hue through the existing gif frames. It also includes an  `fuzz` factor to compress the gif if the file size gets too big
+
+Use as
+```sh
+./party-ify-gif.sh {input_file} {output_file} {smoothness level} {optional fuzz percentage}
+```
+
 
 ## `:gopher_peek:`
 <img src="./emojis/gopher_peek.png" alt=":gopher_peek:" width=64>
@@ -133,3 +143,15 @@ Us as
 
 ## `:spicy-party:`
 <img src="./emojis/spicy_party.gif" alt=":spicy_party:" width=64>
+
+## `:ez-pz:`
+<img src="./emojis/ez-pz.png" alt=":ez-pz:" width=64>
+
+## `:ez-pz-party:`
+<img src="./emojis/ez-pz-party.gif" alt=":ez-pz-party:" width=64>
+
+## `:pepe-jedi:`
+<img src="./emojis/pepe-jedi.gif" alt=":pepe-jedi:" width=64>
+
+## `:pepe-jedi-party:`
+<img src="./emojis/pepe-jedi-party.gif" alt=":pepe-jedi-party:" width=64>
